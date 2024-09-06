@@ -35,5 +35,14 @@ situacao varchar(30)
 );
 
 describe pessoa;
-describe tbfuncionarios;
+describe tbfuncionario;
 describe tbusuarios;
+
+drop table tbusuarios;
+alter table tbfuncionarios rename to tbfuncionario;
+alter table tbfuncionario rename column area to Area;
+alter table tbfuncionario rename column turno to Turno;
+alter table tbfuncionario rename column funcao to Funcao;
+
+alter table pessoa rename column data_nasc to datanascimento;
+alter table pessoa drop column morada;
